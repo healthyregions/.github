@@ -1,1 +1,0 @@
-# Healthy Regions & Policies Lab
