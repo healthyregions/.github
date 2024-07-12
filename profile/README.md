@@ -2,19 +2,17 @@
 
 Visit [healthyregions.org](https://healthyregions.org) to learn about our recent projects and team. Here on Github you can explore all of our open source projects, and access some general data resources that we use internally.
 
-## Census geodata
-
-Within the backend of our [OEPS project](https://github.com/healthyregions/oeps) we have an ETL pipeline that merges, tranforms, and exports data files from the [US Census Bureau](https://www2.census.gov/geo/tiger/) into a few different geospatial data formats. There are two categories of files:
-
-- **Cartographic Boundaries** have simplified geometries which makes them ideal for mapping applications [learn more](https://www.census.gov/programs-surveys/geography/technical-documentation/naming-convention/cartographic-boundary-file.html)
-  - We typically use the 500k scale files, though other scales are available
-- **TIGER/Line Shapefiles** have official, unsimplified geometries and should be used for geospatial analysis [learn more](https://www.census.gov/geographies/mapping-files/time-series/geo/tiger-line-file.html)
-  - *We don't have these in the pipeline yet, but hope to eventually...*
- 
-Feel free to download and use these for your own projects.
-
 <details>
-  <summary><strong>Download files</strong></summary>
+  <summary><strong>Download Census geography files</strong></summary>
+
+  Within the backend of our [OEPS project](https://github.com/healthyregions/oeps) we have an ETL pipeline that merges, tranforms, and exports data files from the [US Census Bureau](https://www2.census.gov/geo/tiger/) into a few different geospatial data formats. There are two categories of files:
+  
+  - **Cartographic Boundaries** have simplified geometries which makes them ideal for mapping applications [learn more](https://www.census.gov/programs-surveys/geography/technical-documentation/naming-convention/cartographic-boundary-file.html)
+    - We typically use the 500k scale files, though they publish other scales as well
+  - **TIGER/Line Shapefiles** have official, unsimplified geometries and should be used for geospatial analysis [learn more](https://www.census.gov/geographies/mapping-files/time-series/geo/tiger-line-file.html)
+    - *We don't have these in the pipeline yet, but hope to eventually...*
+   
+  Feel free to download and use these for your own projects.
 
   *All datasets are merged to create nation-wide coverage*
 
