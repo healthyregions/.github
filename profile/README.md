@@ -14,8 +14,6 @@ Visit [healthyregions.org](https://healthyregions.org) to learn about our recent
    
   Feel free to download and use these for your own projects.
 
-  *All datasets are merged to create nation-wide coverage*
-
   - **GeoJSON** A simple plain text format that is good for small to medium size datasets and can be used in a wide variety of web and desktop software [learn more](https://geojson.org/)
   - **Shapefiles** Used in scripting and desktop software for performant display and analysis [learn more](https://www.geographyrealm.com/what-is-a-shapefile/)
     - "Raw" shapefiles can be read remotely by `geopandas` (which is very cool) so we include them here. Use the zipped file if you are downloading for local use.
@@ -72,5 +70,5 @@ Visit [healthyregions.org](https://healthyregions.org) to learn about our recent
   |Block group|Shapefile (raw)|https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/bg-2018.shp|
   |Block group|Shapefile (zip)|https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/bg-2018-shp.zip|
   |Block group|PMTiles|https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/bg-2018.pmtiles|
-    
+  
 </details>
