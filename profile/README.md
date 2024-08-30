@@ -3,6 +3,46 @@
 Visit [healthyregions.org](https://healthyregions.org) to learn about our recent projects and team. Here on Github you can explore all of our open source projects, and access some general data resources that we use internally.
 
 <details>
+  <summary><strong>HEROP_IDs</strong></summary>
+  
+  In some of our projects we use what we call a <strong>HEROP_ID</strong> to identify geographic boundaries defined by the US Census Bureau, which is a slight variation on the commonly used standard <strong>GEOID</strong>. Our format is similar to what the American FactFinder used (now data.census.gov). 
+
+  A HEROP_ID consists of three parts:
+
+  1. The 3-digit [Summary Level Code](https://www.census.gov/programs-surveys/geography/technical-documentation/naming-convention/cartographic-boundary-file/carto-boundary-summary-level.html) for this geography. Common summary level codes are:
+      - `040` -- **State**
+      - `050` -- **County**
+      - `140` -- **Census Tract**
+      - `150` -- **Census Block Group**
+      - `860` -- **Zip Code Tabulation Area (ZCTA)**
+  2. The 2-letter string `US`
+  3. The standard [GEOID](https://www.census.gov/programs-surveys/geography/guidance/geo-identifiers.html) for the given unit (length depends on unit summary)
+      - GEOIDs are, in turn, hierarchical aggregations of FIPS codes
+
+  Expanding out the FIPS codes for the five summary levels shown above, the full IDs would look like:
+
+  | summary level | format | length | example |
+  |---|---|---|---|
+  |State|`040US` + `STATE`|7|`040US17` (Illinois)|
+  |County|`050US` + `STATE` + `COUNTY`|10|`050US17019` (Champaign County)|
+  |Tract|`140US` + `STATE` + `COUNTY` + `TRACT`|16|`140US17019005900`|
+  |Block Group|`150US` + `STATE` + `COUNTY` + `TRACT` + `BLOCK GROUP`|17|`150US170190059002`|
+  |ZCTA|`860US` + `ZIP CODE`|10|`860US61801`|
+
+  The advantages of this composite ID are:
+  
+  1. Unique across all geographic areas in the US
+  2. Will always be forced to string formatting
+  3. Easy to programmatically change back into the more standard GEOIDs
+      - Excel: `REPLACE(A1, 1, 5, "")`
+      - R: `geoid <- str_split_i(HEROP_ID, "US", -1)`
+      - Python: `geoid = HEROP_ID.split("US")[1]`
+      - JavaScript: `const geoid = HEROP_ID.split("US")[1]`
+
+</details>
+
+
+<details>
   <summary><strong>Download Census geography files</strong></summary>
 
   Within the backend of our [OEPS project](https://github.com/healthyregions/oeps) we have an ETL pipeline that merges, tranforms, and exports data files from the [US Census Bureau](https://www2.census.gov/geo/tiger/) into a few different geospatial data formats. There are two categories of files:
