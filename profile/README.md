@@ -34,10 +34,15 @@ Visit [healthyregions.org](https://healthyregions.org) to learn about our recent
   1. Unique across all geographic areas in the US
   2. Will always be forced to string formatting
   3. Easy to programmatically change back into the more standard GEOIDs
-      - Excel: `REPLACE(A1, 1, 5, "")`
-      - R: `geoid <- str_split_i(HEROP_ID, "US", -1)`
-      - Python: `geoid = HEROP_ID.split("US")[1]`
-      - JavaScript: `const geoid = HEROP_ID.split("US")[1]`
+
+  **Convert to GEOID (integers)**
+
+  The `HEROP_ID` can be converted back to standard GEOIDs by removing the first 5 characters. Here are some examples of what this looks like in different software:
+  
+  - Excel: `REPLACE(A1, 1, 5, "")`
+  - R: `geoid <- str_split_i(HEROP_ID, "US", -1)`
+  - Python: `geoid = HEROP_ID.split("US")[1]`
+  - JavaScript: `const geoid = HEROP_ID.split("US")[1]`
 
 </details>
 
