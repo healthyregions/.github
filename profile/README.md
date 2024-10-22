@@ -37,7 +37,7 @@ Visit [healthyregions.org](https://healthyregions.org) to learn about our recent
 
   **Convert to GEOID (integers)**
 
-  The `HEROP_ID` can be converted back to standard GEOIDs by removing the first 5 characters. Here are some examples of what this looks like in different software:
+  The `HEROP_ID` can be converted back to standard GEOIDs by removing the first 5 characters, or by taking everything after the substring "US". Here are some examples of what this looks like in different software:
   
   - Excel: `REPLACE(A1, 1, 5, "")`
   - R: `geoid <- str_split_i(HEROP_ID, "US", -1)`
