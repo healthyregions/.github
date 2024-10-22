@@ -23,11 +23,11 @@ Visit [healthyregions.org](https://healthyregions.org) to learn about our recent
 
   | summary level | format | length | example |
   |---|---|---|---|
-  |State|`040US` + `STATE`|7|`040US17` (Illinois)|
-  |County|`050US` + `STATE` + `COUNTY`|10|`050US17019` (Champaign County)|
-  |Tract|`140US` + `STATE` + `COUNTY` + `TRACT`|16|`140US17019005900`|
-  |Block Group|`150US` + `STATE` + `COUNTY` + `TRACT` + `BLOCK GROUP`|17|`150US170190059002`|
-  |ZCTA|`860US` + `ZIP CODE`|10|`860US61801`|
+  |State|`040US` + `STATE (2)`|7|`040US17` (Illinois)|
+  |County|`050US` + `STATE (2)` + `COUNTY (3)`|10|`050US17019` (Champaign County)|
+  |Tract|`140US` + `STATE (2)` + `COUNTY (3)` + `TRACT (6)`|16|`140US17019005900`|
+  |Block Group|`150US` + `STATE (2)` + `COUNTY (3)` + `TRACT (6)` + `BLOCK GROUP (1)`|17|`150US170190059002`|
+  |ZCTA|`860US` + `ZIP CODE (5)`|10|`860US61801`|
 
   The advantages of this composite ID are:
   
