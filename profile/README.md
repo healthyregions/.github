@@ -56,7 +56,10 @@ Visit [healthyregions.org](https://healthyregions.org) to learn about our recent
 
   - **GeoJSON** A simple plain text format that is good for small to medium size datasets and can be used in a wide variety of web and desktop software [learn more](https://geojson.org/)
   - **Shapefiles** Used in scripting and desktop software for performant display and analysis [learn more](https://www.geographyrealm.com/what-is-a-shapefile/)
-    - "Raw" shapefiles can be read remotely by `geopandas` (which is very cool) so we include them here. Use the zipped file if you are downloading for local use.
+    - Tip: `geopandas` should allow you to directly open remote zip files with something like this [learn more](https://geopandas.org/en/stable/docs/reference/api/geopandas.read_file.html):
+
+            import geopandas as gpd
+            gpd.read_file('/vsizip//vsicurl/https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/state-2010-shp.zip
   - **PMTiles** A "cloud-native" vector format that is very fast in the right web mapping environment [learn more](https://docs.protomaps.com/pmtiles/)
 
   ### Cartographic Boundaries 2010 (500k)
@@ -64,19 +67,15 @@ Visit [healthyregions.org](https://healthyregions.org) to learn about our recent
   |Geography|Format|Link|
   |---|---|---|
   |State|GeoJSON|https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/state-2010.geojson|
-  |State|Shapefile (raw)|https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/state-2010.shp|
   |State|Shapefile (zip)|https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/state-2010-shp.zip|
   |State|PMTiles|https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/state-2010.pmtiles|
   |County|GeoJSON|https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/county-2010.geojson|
-  |County|Shapefile (raw)|https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/county-2010.shp|
   |County|Shapefile (zip)|https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/county-2010-shp.zip|
   |County|PMTiles|https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/county-2010.pmtiles|
   |Tract|GeoJSON|https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/tract-2010.geojson|
-  |Tract|Shapefile (raw)|https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/tract-2010.shp|
   |Tract|Shapefile (zip)|https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/tract-2010-shp.zip|
   |Tract|PMTiles|https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/tract-2010.pmtiles|
   |Block group|GeoJSON|https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/bg-2010.geojson|
-  |Block group|Shapefile (raw)|https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/bg-2010.shp|
   |Block group|Shapefile (zip)|https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/bg-2010-shp.zip|
   |Block group|PMTiles|https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/bg-2010.pmtiles|
 
@@ -87,27 +86,21 @@ Visit [healthyregions.org](https://healthyregions.org) to learn about our recent
   |Geography|Format|Link|
   |---|---|---|
   |State|GeoJSON|https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/state-2018.geojson|
-  |State|Shapefile (raw)|https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/state-2018.shp|
   |State|Shapefile (zip)|https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/state-2018-shp.zip|
   |State|PMTiles|https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/state-2018.pmtiles|
   |County|GeoJSON|https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/county-2018.geojson|
-  |County|Shapefile (raw)|https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/county-2018.shp|
   |County|Shapefile (zip)|https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/county-2018-shp.zip|
   |County|PMTiles|https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/county-2018.pmtiles|
   |ZCTA|GeoJSON|https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/zcta-2010.geojson|
-  |ZCTA|Shapefile (raw)|https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/zcta-2010.shp|
   |ZCTA|Shapefile (zip)|https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/zcta-2010-shp.zip|
   |ZCTA|PMTiles|https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/zcta-2010.pmtiles|
   |Place|GeoJSON|https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/place-2018.geojson|
-  |Place|Shapefile (raw)|https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/place-2018.shp|
   |Place|Shapefile (zip)|https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/place-2018-shp.zip|
   |Place|PMTiles|https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/place-2018.pmtiles|
   |Tract|GeoJSON|https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/tract-2018.geojson|
-  |Tract|Shapefile (raw)|https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/tract-2018.shp|
   |Tract|Shapefile (zip)|https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/tract-2018-shp.zip|
   |Tract|PMTiles|https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/tract-2018.pmtiles|
   |Block group|GeoJSON|https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/bg-2018.geojson|
-  |Block group|Shapefile (raw)|https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/bg-2018.shp|
   |Block group|Shapefile (zip)|https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/bg-2018-shp.zip|
   |Block group|PMTiles|https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/bg-2018.pmtiles|
   
