@@ -71,18 +71,18 @@ Visit [healthyregions.org](https://healthyregions.org) to learn about our recent
     
   |Geography|Format|Link|
   |---|---|---|
-  |State|GeoJSON|https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/state-2010.geojson|
-  |State|Shapefile (zip)|https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/state-2010-shp.zip|
-  |State|PMTiles|https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/state-2010.pmtiles|
-  |County|GeoJSON|https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/county-2010.geojson|
-  |County|Shapefile (zip)|https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/county-2010-shp.zip|
-  |County|PMTiles|https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/county-2010.pmtiles|
-  |Tract|GeoJSON|https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/tract-2010.geojson|
-  |Tract|Shapefile (zip)|https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/tract-2010-shp.zip|
-  |Tract|PMTiles|https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/tract-2010.pmtiles|
-  |Block group|GeoJSON|https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/bg-2010.geojson|
-  |Block group|Shapefile (zip)|https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/bg-2010-shp.zip|
-  |Block group|PMTiles|https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/bg-2010.pmtiles|
+  |State|GeoJSON|https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/state-2010-500k.geojson|
+  |State|Shapefile (zip)|https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/state-2010-500k-shp.zip|
+  |State|PMTiles|https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/state-2010-500k.pmtiles|
+  |County|GeoJSON|https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/county-2010-500k.geojson|
+  |County|Shapefile (zip)|https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/county-2010-500k-shp.zip|
+  |County|PMTiles|https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/county-2010-500k.pmtiles|
+  |Tract|GeoJSON|https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/tract-2010-500k.geojson|
+  |Tract|Shapefile (zip)|https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/tract-2010-500k-shp.zip|
+  |Tract|PMTiles|https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/tract-2010-500k.pmtiles|
+  |Block group|GeoJSON|https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/bg-2010-500k.geojson|
+  |Block group|Shapefile (zip)|https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/bg-2010-500k-shp.zip|
+  |Block group|PMTiles|https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/bg-2010-500k.pmtiles|
 
   *Note: We don't yet have ZCTA and Place geographies for 2010.*
 
@@ -90,23 +90,23 @@ Visit [healthyregions.org](https://healthyregions.org) to learn about our recent
   
   |Geography|Format|Link|
   |---|---|---|
-  |State|GeoJSON|https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/state-2018.geojson|
-  |State|Shapefile (zip)|https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/state-2018-shp.zip|
-  |State|PMTiles|https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/state-2018.pmtiles|
-  |County|GeoJSON|https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/county-2018.geojson|
-  |County|Shapefile (zip)|https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/county-2018-shp.zip|
-  |County|PMTiles|https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/county-2018.pmtiles|
-  |ZCTA|GeoJSON|https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/zcta-2010.geojson|
-  |ZCTA|Shapefile (zip)|https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/zcta-2010-shp.zip|
-  |ZCTA|PMTiles|https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/zcta-2010.pmtiles|
-  |Place|GeoJSON|https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/place-2018.geojson|
-  |Place|Shapefile (zip)|https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/place-2018-shp.zip|
-  |Place|PMTiles|https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/place-2018.pmtiles|
-  |Tract|GeoJSON|https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/tract-2018.geojson|
+  |State|GeoJSON|https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/state-2018-500k.geojson|
+  |State|Shapefile (zip)|https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/state-2018-500k-shp.zip|
+  |State|PMTiles|https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/state-2018-500k.pmtiles|
+  |County|GeoJSON|https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/county-2018-500k.geojson|
+  |County|Shapefile (zip)|https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/county-2018-500k-shp.zip|
+  |County|PMTiles|https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/county-2018-500k.pmtiles|
+  |ZCTA|GeoJSON|https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/zcta-2010-500k.geojson|
+  |ZCTA|Shapefile (zip)|https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/zcta-2010-500k-shp.zip|
+  |ZCTA|PMTiles|https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/zcta-2010-500k.pmtiles|
+  |Place|GeoJSON|https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/place-2018-500k.geojson|
+  |Place|Shapefile (zip)|https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/place-2018-500k-shp.zip|
+  |Place|PMTiles|https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/place-2018-500k.pmtiles|
+  |Tract|GeoJSON|https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/tract-2018-500k.geojson|
   |Tract|Shapefile (zip)|https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/tract-2018-shp.zip|
-  |Tract|PMTiles|https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/tract-2018.pmtiles|
-  |Block group|GeoJSON|https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/bg-2018.geojson|
-  |Block group|Shapefile (zip)|https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/bg-2018-shp.zip|
-  |Block group|PMTiles|https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/bg-2018.pmtiles|
+  |Tract|PMTiles|https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/tract-2018-500k.pmtiles|
+  |Block group|GeoJSON|https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/bg-2018-500k.geojson|
+  |Block group|Shapefile (zip)|https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/bg-2018-500k-shp.zip|
+  |Block group|PMTiles|https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/bg-2018-500k.pmtiles|
   
 </details>
