@@ -110,3 +110,34 @@ Visit [healthyregions.org](https://healthyregions.org) to learn about our recent
   |Block group|PMTiles|https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/bg-2018-500k.pmtiles|
   
 </details>
+
+<details>
+  <summary><strong>Web maps and static site hosting</strong></summary>
+
+  We have a system in place for using Github pages to host our work. One thing to consider when you publish your web app or map is what your want your URL to look like. Consider these approaches:
+
+  ### 1. As a subdirectory of `maps.healthyregions.org`
+  
+  **Example: `maps.healthyregions.org/<myproject>`**
+  
+  This is more or less the easiest way to integrate your project into our domain. Just create your Github repository with your app as an `index.html` file in the root, and ask that lab staff add your repo as a submodule in this repository: [healthyregions/mapping-projects](https://github.com/healthyregions/mapping-projects]. No need to deal with Github pages on your repository.
+
+  ### 2. Subdomain under `healthyregions.org`
+  
+  **Example: `<myproject>.healthyregions.org`**
+  
+  In this case you must publish your Github pages repository like normal, and then request that we update our healthyregions DNS to make a subdomain for your project. This will require some extra configuration in your Github pages settings.
+
+  ### 3. Your default Github pages domain
+
+  **Example: `<username>.github.io/<myproject>`**
+
+  You can also just independently publish a github repo if you want--no need to integrate with our domain name or URL at all. Just follow the usual steps for [getting started Github pages](https://pages.github.com/).
+  
+  ### 4. Custom domain
+  
+  **Example: `<myproject>.com`**
+
+  Finally, you could always purchase your own domain `myproject.com` from a registrar like NameCheap or GoDaddy (there are a lot of them), publish your own Github repository with Github pages, and then connect the domain to Github pages. Keep in mind that you'll need to continue paying for this domain as long as you want your project to be online. Also, while there are a lot fun and cheap domains today (like $1/year for `healthytime.store`, as of this writing) prices can and will increase in the future.
+
+</details>
