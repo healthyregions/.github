@@ -120,7 +120,7 @@ Visit [healthyregions.org](https://healthyregions.org) to learn about our recent
   
   **Example: `maps.healthyregions.org/<myproject>`**
   
-  This is more or less the easiest way to integrate your project into our domain. Just create your Github repository with your app as an `index.html` file in the root, and ask that lab staff add your repo as a submodule in this repository: [healthyregions/mapping-projects](https://github.com/healthyregions/mapping-projects]. No need to deal with Github pages on your repository.
+  This is more or less the easiest way to integrate your project into our domain. Just create your Github repository with your app as an `index.html` file in the root, and ask that lab staff add your repo as a submodule in this repository: [healthyregions/mapping-projects](https://github.com/healthyregions/mapping-projects). No need to deal with Github pages on your repository.
 
   ### 2. Subdomain under `healthyregions.org`
   
