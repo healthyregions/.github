@@ -50,7 +50,7 @@ Visit [healthyregions.org](https://healthyregions.org) to learn about our recent
 <details>
   <summary><strong>Download Census geography files</strong></summary>
 
-  Within the backend of our [OEPS project](https://github.com/healthyregions/oeps) we have an ETL pipeline that merges, tranforms, and exports data files from the [US Census Bureau](https://www2.census.gov/geo/tiger/) into a few different geospatial data formats. There are two categories of files:
+  Within the backend of our [OEPS project](https://github.com/healthyregions/oeps) we have an ETL pipeline that merges, tranforms, and exports data files directly from the [US Census Bureau](https://www2.census.gov/geo/tiger/)'s [FTP server](https://www2.census.gov/geo/tiger/) into a few different geospatial data formats. There are two categories of files:
   
   - **Cartographic Boundaries** have simplified geometries which makes them ideal for mapping applications [learn more](https://www.census.gov/programs-surveys/geography/technical-documentation/naming-convention/cartographic-boundary-file.html)
     - We typically use the 500k scale files, though they publish other scales as well
@@ -106,11 +106,11 @@ Visit [healthyregions.org](https://healthyregions.org) to learn about our recent
   - **GeoJSON** A simple plain text format that is good for small to medium size datasets and can be used in a wide variety of web and desktop software [learn more](https://geojson.org/)
   - **PMTiles** A "cloud-native" vector format that is very fast in the right web mapping environment [learn more](https://docs.protomaps.com/pmtiles/)
   - **Shapefiles** Used in scripting and desktop software for performant display and analysis [learn more](https://www.geographyrealm.com/what-is-a-shapefile/)
-    - **R Example**: `sf` allows you to directly open remote zip files without downloading them [learn more, `read_sf` seems not to be documented though (?)](https://r-spatial.github.io/sf):
+    - **R Example**: `sf` allows you to directly open remote, zipped shapefiles without downloading them [learn more, `read_sf` seems not to be documented though (?)](https://r-spatial.github.io/sf):
 
             library('sf')
             tracts <- read_sf('/vsizip//vsicurl/https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/tract-2018-500k-shp.zip')
-    - **Python Example**: `geopandas` allows you to directly open remote zip files without downloading them [learn more](https://geopandas.org/en/stable/docs/reference/api/geopandas.read_file.html):
+    - **Python Example**: `geopandas` allows you to directly open remote, zipped shapefiles files without downloading them [learn more](https://geopandas.org/en/stable/docs/reference/api/geopandas.read_file.html):
 
             import geopandas as gpd
             tracts = gpd.read_file("/vsizip//vsicurl/https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/state-2010-500k-shp.zip")
