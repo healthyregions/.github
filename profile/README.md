@@ -64,7 +64,7 @@ Visit [healthyregions.org](https://healthyregions.org) to learn about our recent
     - Tip: `geopandas` should allow you to directly open remote zip files with something like this [learn more](https://geopandas.org/en/stable/docs/reference/api/geopandas.read_file.html):
 
             import geopandas as gpd
-            gpd.read_file('/vsizip//vsicurl/https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/state-2010-shp.zip
+            gpd.read_file("/vsizip//vsicurl/https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/state-2010-500k-shp.zip")
   - **PMTiles** A "cloud-native" vector format that is very fast in the right web mapping environment [learn more](https://docs.protomaps.com/pmtiles/)
 
   ### Cartographic Boundaries 2010 (500k)
@@ -103,7 +103,7 @@ Visit [healthyregions.org](https://healthyregions.org) to learn about our recent
   |Place|Shapefile (zip)|https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/place-2018-500k-shp.zip|
   |Place|PMTiles|https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/place-2018-500k.pmtiles|
   |Tract|GeoJSON|https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/tract-2018-500k.geojson|
-  |Tract|Shapefile (zip)|https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/tract-2018-shp.zip|
+  |Tract|Shapefile (zip)|https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/tract-2018-500k-shp.zip|
   |Tract|PMTiles|https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/tract-2018-500k.pmtiles|
   |Block group|GeoJSON|https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/bg-2018-500k.geojson|
   |Block group|Shapefile (zip)|https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/bg-2018-500k-shp.zip|
