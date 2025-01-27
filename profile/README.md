@@ -57,15 +57,7 @@ Visit [healthyregions.org](https://healthyregions.org) to learn about our recent
   - **TIGER/Line Shapefiles** have official, unsimplified geometries and should be used for geospatial analysis [learn more](https://www.census.gov/geographies/mapping-files/time-series/geo/tiger-line-file.html)
     - *We don't have these in the pipeline yet, but hope to eventually...*
    
-  Feel free to download and use these for your own projects.
-
-  - **GeoJSON** A simple plain text format that is good for small to medium size datasets and can be used in a wide variety of web and desktop software [learn more](https://geojson.org/)
-  - **Shapefiles** Used in scripting and desktop software for performant display and analysis [learn more](https://www.geographyrealm.com/what-is-a-shapefile/)
-    - Tip: `geopandas` should allow you to directly open remote zip files with something like this [learn more](https://geopandas.org/en/stable/docs/reference/api/geopandas.read_file.html):
-
-            import geopandas as gpd
-            gpd.read_file("/vsizip//vsicurl/https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/state-2010-500k-shp.zip")
-  - **PMTiles** A "cloud-native" vector format that is very fast in the right web mapping environment [learn more](https://docs.protomaps.com/pmtiles/)
+  Feel free to download and use these for your own projects. See below for how to use each file format.
 
   ### Cartographic Boundaries 2010 (500k)
     
@@ -108,6 +100,20 @@ Visit [healthyregions.org](https://healthyregions.org) to learn about our recent
   |Block group|GeoJSON|https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/bg-2018-500k.geojson|
   |Block group|Shapefile (zip)|https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/bg-2018-500k-shp.zip|
   |Block group|PMTiles|https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/bg-2018-500k.pmtiles|
+
+  ### File formats
+
+  - **GeoJSON** A simple plain text format that is good for small to medium size datasets and can be used in a wide variety of web and desktop software [learn more](https://geojson.org/)
+  - **PMTiles** A "cloud-native" vector format that is very fast in the right web mapping environment [learn more](https://docs.protomaps.com/pmtiles/)
+  - **Shapefiles** Used in scripting and desktop software for performant display and analysis [learn more](https://www.geographyrealm.com/what-is-a-shapefile/)
+    - **R Example**: `sf` allows you to directly open remote zip files without downloading them [learn more, `read_sf` seems not to be documented though (?)](https://r-spatial.github.io/sf):
+
+            library('sf')
+            tracts <- read_sf('/vsizip//vsicurl/https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/tract-2018-500k-shp.zip')
+    - **Python Example**: `geopandas` allows you to directly open remote zip files without downloading them [learn more](https://geopandas.org/en/stable/docs/reference/api/geopandas.read_file.html):
+
+            import geopandas as gpd
+            tracts = gpd.read_file("/vsizip//vsicurl/https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/state-2010-500k-shp.zip")
   
 </details>
 
