@@ -88,9 +88,9 @@ Visit [healthyregions.org](https://healthyregions.org) to learn about our recent
   |County|GeoJSON|https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/county-2018-500k.geojson|
   |County|Shapefile (zip)|https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/county-2018-500k-shp.zip|
   |County|PMTiles|https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/county-2018-500k.pmtiles|
-  |ZCTA|GeoJSON|https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/zcta-2010-500k.geojson|
-  |ZCTA|Shapefile (zip)|https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/zcta-2010-500k-shp.zip|
-  |ZCTA|PMTiles|https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/zcta-2010-500k.pmtiles|
+  |ZCTA|GeoJSON|https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/zcta-2018-500k.geojson|
+  |ZCTA|Shapefile (zip)|https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/zcta-2018-500k-shp.zip|
+  |ZCTA|PMTiles|https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/zcta-2018-500k.pmtiles|
   |Place|GeoJSON|https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/place-2018-500k.geojson|
   |Place|Shapefile (zip)|https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/place-2018-500k-shp.zip|
   |Place|PMTiles|https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/place-2018-500k.pmtiles|
