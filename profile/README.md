@@ -50,6 +50,8 @@ Visit [healthyregions.org](https://healthyregions.org) to learn about our recent
 <details>
   <summary><strong>Download Census geography files</strong></summary>
 
+  > **Important:** See https://geodata.healthyregions.org for newer download links than those provided below.
+
   Within the backend of our [OEPS project](https://github.com/healthyregions/oeps) we have an ETL pipeline that merges, tranforms, and exports data files directly from the [US Census Bureau](https://www2.census.gov/geo/tiger/)'s [FTP server](https://www2.census.gov/geo/tiger/) into a few different geospatial data formats. There are two categories of files:
   
   - **Cartographic Boundaries** have simplified geometries which makes them ideal for mapping applications [learn more](https://www.census.gov/programs-surveys/geography/technical-documentation/naming-convention/cartographic-boundary-file.html)
