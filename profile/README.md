@@ -2,6 +2,23 @@
 
 Visit [healthyregions.org](https://healthyregions.org) to learn about our recent projects and team. Here on Github you can explore all of our open source projects, and access some general data resources that we use internally.
 
+### HeRoP Geodata - Curated US Census geography files
+
+We maintain a pipeline that pulls geography files from the US Census FTP, merges, transforms, and exports it to a set of standardized location in S3. We use these files directly in multiple applications.
+
+- Repo: https://github.com/healthyregions/geodata
+- Website: https://geodata.healthyregions.org
+
+### Overture POI Extraction
+
+We maintain an extraction script that pulls "point of interest" data from the Overture Maps Foundation's Places dataset. We use these exports, which are uploaded to S3, directly in the Place Project Data Discovery application.
+
+- Repo: https://github.com/healthyregions/overture-poi-extract
+
+### General info
+
+Below are summaries of some topics that are relevant across different projects.
+
 <details>
   <summary><strong>HEROP_IDs</strong></summary>
   
@@ -47,77 +64,7 @@ Visit [healthyregions.org](https://healthyregions.org) to learn about our recent
 </details>
 
 
-<details>
-  <summary><strong>Download Census geography files</strong></summary>
 
-  > **Important:** See https://geodata.healthyregions.org for newer download links than those provided below.
-
-  Within the backend of our [OEPS project](https://github.com/healthyregions/oeps) we have an ETL pipeline that merges, tranforms, and exports data files directly from the [US Census Bureau](https://www2.census.gov/geo/tiger/)'s [FTP server](https://www2.census.gov/geo/tiger/) into a few different geospatial data formats. There are two categories of files:
-  
-  - **Cartographic Boundaries** have simplified geometries which makes them ideal for mapping applications [learn more](https://www.census.gov/programs-surveys/geography/technical-documentation/naming-convention/cartographic-boundary-file.html)
-    - We typically use the 500k scale files, though they publish other scales as well
-  - **TIGER/Line Shapefiles** have official, unsimplified geometries and should be used for geospatial analysis [learn more](https://www.census.gov/geographies/mapping-files/time-series/geo/tiger-line-file.html)
-    - *We don't have these in the pipeline yet, but hope to eventually...*
-   
-  Feel free to download and use these for your own projects. See below for how to use each file format.
-
-  ### Cartographic Boundaries 2010 (500k)
-    
-  |Geography|Format|Link|
-  |---|---|---|
-  |State|GeoJSON|https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/state-2010-500k.geojson|
-  |State|Shapefile (zip)|https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/state-2010-500k-shp.zip|
-  |State|PMTiles|https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/state-2010-500k.pmtiles|
-  |County|GeoJSON|https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/county-2010-500k.geojson|
-  |County|Shapefile (zip)|https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/county-2010-500k-shp.zip|
-  |County|PMTiles|https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/county-2010-500k.pmtiles|
-  |Tract|GeoJSON|https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/tract-2010-500k.geojson|
-  |Tract|Shapefile (zip)|https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/tract-2010-500k-shp.zip|
-  |Tract|PMTiles|https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/tract-2010-500k.pmtiles|
-  |Block group|GeoJSON|https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/bg-2010-500k.geojson|
-  |Block group|Shapefile (zip)|https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/bg-2010-500k-shp.zip|
-  |Block group|PMTiles|https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/bg-2010-500k.pmtiles|
-
-  *Note: We don't yet have ZCTA and Place geographies for 2010.*
-
-  ### Cartographic Boundaries 2018 (500k)
-  
-  |Geography|Format|Link|
-  |---|---|---|
-  |State|GeoJSON|https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/state-2018-500k.geojson|
-  |State|Shapefile (zip)|https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/state-2018-500k-shp.zip|
-  |State|PMTiles|https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/state-2018-500k.pmtiles|
-  |County|GeoJSON|https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/county-2018-500k.geojson|
-  |County|Shapefile (zip)|https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/county-2018-500k-shp.zip|
-  |County|PMTiles|https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/county-2018-500k.pmtiles|
-  |ZCTA|GeoJSON|https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/zcta-2018-500k.geojson|
-  |ZCTA|Shapefile (zip)|https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/zcta-2018-500k-shp.zip|
-  |ZCTA|PMTiles|https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/zcta-2018-500k.pmtiles|
-  |Place|GeoJSON|https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/place-2018-500k.geojson|
-  |Place|Shapefile (zip)|https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/place-2018-500k-shp.zip|
-  |Place|PMTiles|https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/place-2018-500k.pmtiles|
-  |Tract|GeoJSON|https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/tract-2018-500k.geojson|
-  |Tract|Shapefile (zip)|https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/tract-2018-500k-shp.zip|
-  |Tract|PMTiles|https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/tract-2018-500k.pmtiles|
-  |Block group|GeoJSON|https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/bg-2018-500k.geojson|
-  |Block group|Shapefile (zip)|https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/bg-2018-500k-shp.zip|
-  |Block group|PMTiles|https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/bg-2018-500k.pmtiles|
-
-  ### File formats
-
-  - **GeoJSON** A simple plain text format that is good for small to medium size datasets and can be used in a wide variety of web and desktop software [learn more](https://geojson.org/)
-  - **PMTiles** A "cloud-native" vector format that is very fast in the right web mapping environment [learn more](https://docs.protomaps.com/pmtiles/)
-  - **Shapefiles** Used in scripting and desktop software for performant display and analysis [learn more](https://www.geographyrealm.com/what-is-a-shapefile/)
-    - **R Example**: `sf` allows you to directly open remote, zipped shapefiles without downloading them [learn more, `read_sf` seems not to be documented though (?)](https://r-spatial.github.io/sf):
-
-            library('sf')
-            tracts <- read_sf('/vsizip//vsicurl/https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/tract-2018-500k-shp.zip')
-    - **Python Example**: `geopandas` allows you to directly open remote, zipped shapefiles files without downloading them [learn more](https://geopandas.org/en/stable/docs/reference/api/geopandas.read_file.html):
-
-            import geopandas as gpd
-            tracts = gpd.read_file("/vsizip//vsicurl/https://herop-geodata.s3.us-east-2.amazonaws.com/oeps/state-2010-500k-shp.zip")
-  
-</details>
 
 <details>
   <summary><strong>Web maps and static site hosting</strong></summary>
